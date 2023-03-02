@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Animation</title>
+		<style>
+			#main {
+				border: 2px solid black;
+				width: 400px;
+				height: 400px;
+			}
+			#child {
+				position: relative;
+				height: 100px;
+				width: 100px;
+				background-color: rgb(235, 13, 13);
+				animation-name: colorchange;
+				animation-duration: 5s;
+				/* animation-timing-function: ease-in-out; */
+				/* animation-iteration-count: infinite; */
+				/* animation-direction: reverse; */
+				/* animation-fill-mode: forwards; */
+				/* animation-fill-mode: backwards; */
+				/* animation-play-state: running; */
+			}
+
+			@keyframes colorchange {
+				/*  only 2 position from start to direct end */
+				/* from {
+					background-color: aqua;
+				}
+				to {
+					background-color: cornflowerblue;
+				} */
+
+				/* here we can define start, mid, end in numbrer */
+
+				0% {
+					left: 0px;
+					top: 0px;
+					background-color: blueviolet;
+				}
+				25% {
+					left: 300px;
+					top: 0;
+					background-color: #3ae22b;
+				}
+				50% {
+					left: 300px;
+					top: 300px;
+					background-color: #0589aa;
+				}
+				75% {
+					left: 0;
+					top: 300px;
+					background-color: #aca40b;
+				}
+				100% {
+					left: 0px;
+					top: 0px;
+					background-color: rgb(226, 15, 159);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="child"></div>
+		</div>
+	</body>
+</html>

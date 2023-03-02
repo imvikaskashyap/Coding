@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			body {
+				background-color: chocolate;
+			}
+
+			div::after {
+				content: "This is default";
+			}
+
+			@media (max-width: 400px) {
+				body {
+					background-color: chartreuse;
+				}
+
+				div::after {
+					content: "This is small";
+				}
+			}
+
+			@media (min-width: 400px) and (max-width:768px) {
+				body {
+					background-color: darkmagenta;
+				}
+
+				div::after {
+					content: "This is for medium";
+				}
+			}
+
+			@media (min-width: 768px) and (max-width:900px) {
+				body {
+					background-color: darkgrey;
+				}
+
+				div::after {
+					content: "This is extra medium";
+				}
+			}
+
+			@media (min-width:900px) {
+				body {
+								background-color: chocolate;
+
+				}
+
+				div::after {
+					content: "This is for desktop size;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
